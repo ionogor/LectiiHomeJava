@@ -2,25 +2,12 @@ package com.step.FindCh;
 
 import java.util.Scanner;
 
-public class FIndCh {
-
-    char[] vocale=new char[]{'a', 'e', 'i', 'o','u', 'ă', 'î'};
-    char[] symbol=new char[7];
-
-   public  void FindCh()
+public static void findCh(char c)
     {
-        Scanner sc=new Scanner(System.in);
-
-        String r;
-
-        for (int i=0;i<vocale.length;i++)
+        if(c=='a' || c == 'e' || c == 'i' || c=='o' || c=='u')
         {
-               symbol[i]=sc.next().charAt(0);
-
-             r=vocale[i] == symbol[i] ? " Este vocala" : " Este consoana";
-
-            System.out.println(symbol[i]+r);
+            System.out.println(c+ " este vocala ");
         }
+        else
+            System.out.println("Este consoana");
     }
-
-}
